@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+
+# Environment
+.env
+
+# Database
+*.db
+*.sqlite3
+
+# ML artifacts (large/binary - not committed, regenerated via train.py)
+ml/model/*.pkl
+ml/model/metrics.json
+ml/dataset/UpdatedResumeDataSet.csv
+ml/dataset/documind_dataset.csv
+
+# Synthetic smoke-test model (NOT the real trained model — see README).
+# Regenerate with: python -m ml.tests.test_train (or see README "Testing").
+ml/model_placeholder_synthetic/
+
+# Node / React
+frontend/node_modules/
+frontend/build/
+frontend/.env
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Test coverage
+.coverage
+htmlcov/

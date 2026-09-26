@@ -1,0 +1,18 @@
+John Example
+DevOps Engineer
+
+Summary
+DevOps engineer focused on CI/CD automation and containerized deployments.
+
+Skills
+Jenkins, Docker, Kubernetes, Linux, Bash scripting, monitoring,
+infrastructure automation, cloud deployment.
+
+Experience
+Built and maintained CI/CD pipelines using Jenkins for automated testing
+and deployment. Containerized applications with Docker and orchestrated
+them with Kubernetes. Automated infrastructure provisioning and monitored
+production systems for reliability.
+
+Education
+BSc in Software Engineering.

@@ -1,0 +1,19 @@
+Jane Example
+Data Scientist
+
+Summary
+Data scientist with experience building predictive models and analyzing
+large datasets using Python.
+
+Skills
+Python, pandas, scikit-learn, SQL, statistics, data visualization,
+machine learning, regression, classification.
+
+Experience
+Built customer churn prediction models using Python and scikit-learn.
+Performed exploratory data analysis on transactional datasets.
+Created dashboards to communicate model results to stakeholders.
+Trained and evaluated classification models with cross-validation.
+
+Education
+BSc in Computer Science.
