@@ -353,3 +353,16 @@ returns a `503` with a clear message until `ml/train.py` has been run (or point
 
 Everything else — architecture, all business logic, database, API routes, React UI,
 tests, and documentation — is complete in the attached project.
+
+
+---
+
+## Author
+
+**Khalil Lamrabet**
+
+Engineering Student — Big Data & Artificial Intelligence
+
+- GitHub: [@Xerow42](https://github.com/Xerow42)
+- LinkedIn: [khalillam12](https://www.linkedin.com/in/khalillam12/)
+- Email: [klamrabeta19@gmail.com](mailto:klamrabeta19@gmail.com)
