@@ -161,11 +161,7 @@ python ml/evaluate.py
 ---
 
 ## Known Limitations & Blockers
-
-This project was built inside a sandboxed container **with no outbound network
-access** (confirmed by testing `pip install`, `npm install`, and direct HTTPS
-requests — all returned `403`/connection errors). That created two real blockers,
-handled as transparently as possible rather than papered over:
+ 
 
 ### 1. The real training dataset could not be downloaded here — action needed from you
 
