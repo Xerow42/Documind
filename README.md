@@ -49,6 +49,9 @@ relational database design (SQLite), React, automated testing, and software arch
     [Test Results](#test-results-what-i-actually-ran) for exactly what ran and what didn't.
 
 ---
+## Dashboard/TESTING
+
+![Dashboard](documindd.png)
 
 ## Architecture
 
