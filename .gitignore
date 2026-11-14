@@ -35,3 +35,14 @@ frontend/.env
 # Test coverage
 .coverage
 htmlcov/
+
+ml/dataset/*.csv
+ml/dataset/data/
+ml/model/*.pkl
+.env
+*.db
+node_modules/
+__pycache__/
+
+ml/dataset/Resume/
+/package-lock.json

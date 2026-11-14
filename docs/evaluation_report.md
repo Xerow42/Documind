@@ -1,39 +1,49 @@
-# DocuMind — Model Evaluation Report
+# DocuMind â€” Model Evaluation Report
 
-Selected model: **logistic_regression** (selection criterion: highest macro-F1 on the held-out test split)
+Dataset: 2482 unique resumes, 24 categories (train 1985 / test 497).
 
-Train samples: 72  |  Test samples: 19
+Selected model: **linear_svm**, chosen by 5-fold stratified cross-validation (macro-F1) on the training split only. The test split was evaluated once, after selection.
 
-## Model comparison
+## Cross-validation (training split)
 
-| Model | Accuracy | Precision (macro) | Recall (macro) | F1 (macro) |
+| Model | Macro-F1 (mean Â± std) |
+|---|---|
+| logistic_regression | 0.581 Â± 0.017 |
+| linear_svm | 0.655 Â± 0.016 |
+| multinomial_nb | 0.456 Â± 0.016 |
+
+## Test set (single evaluation)
+
+- Accuracy: 0.726
+- Macro precision: 0.703
+- Macro recall: 0.691
+- Macro F1: 0.685
+
+## Per-category results
+
+| Category | Precision | Recall | F1 | Support |
 |---|---|---|---|---|
-| logistic_regression | 0.7895 | 0.6111 | 0.6667 | 0.6158 |
-| linear_svm | 0.7895 | 0.6111 | 0.6667 | 0.6158 |
-| multinomial_nb | 0.3158 | 0.142 | 0.1667 | 0.1224 |
-
-## Notes on the metrics
-
-- Reported on a single held-out test split (`train_test_split`, stratified by category), not cross-validated — a reasonable baseline for a project this size, documented as a possible future improvement (k-fold CV) rather than presented as more rigorous than it is.
-- **Macro** precision/recall/F1 (not micro/accuracy alone) are the primary comparison metric because the dataset is class-imbalanced (see docs/dataset_strategy.md) — macro-averaging weights every category equally instead of letting the largest class dominate the score.
-
-## Classification report (selected model)
-
-```
-                          precision    recall  f1-score   support
-
-       Business Analysis       0.50      1.00      0.67         1
-           Cybersecurity       0.00      0.00      0.00         1
-        Data Engineering       1.00      1.00      1.00         3
-            Data Science       0.67      1.00      0.80         2
- Database Administration       0.50      0.50      0.50         2
-DevOps / Cloud Computing       1.00      0.50      0.67         2
-         Human Resources       1.00      1.00      1.00         2
-    Software Engineering       0.83      1.00      0.91         5
-         Web Development       0.00      0.00      0.00         1
-
-                accuracy                           0.79        19
-               macro avg       0.61      0.67      0.62        19
-            weighted avg       0.74      0.79      0.74        19
-
-```
+| ACCOUNTANT | 0.63 | 0.92 | 0.75 | 24 |
+| ADVOCATE | 0.70 | 0.67 | 0.68 | 24 |
+| AGRICULTURE | 0.80 | 0.62 | 0.70 | 13 |
+| APPAREL | 0.56 | 0.26 | 0.36 | 19 |
+| ARTS | 0.64 | 0.43 | 0.51 | 21 |
+| AUTOMOBILE | 0.67 | 0.57 | 0.62 | 7 |
+| AVIATION | 0.87 | 0.87 | 0.87 | 23 |
+| BANKING | 0.86 | 0.78 | 0.82 | 23 |
+| BPO | 0.00 | 0.00 | 0.00 | 4 |
+| BUSINESS-DEVELOPMENT | 0.71 | 0.83 | 0.77 | 24 |
+| CHEF | 0.89 | 0.71 | 0.79 | 24 |
+| CONSTRUCTION | 0.75 | 0.82 | 0.78 | 22 |
+| CONSULTANT | 0.75 | 0.39 | 0.51 | 23 |
+| DESIGNER | 0.87 | 0.95 | 0.91 | 21 |
+| DIGITAL-MEDIA | 0.75 | 0.63 | 0.69 | 19 |
+| ENGINEERING | 0.72 | 0.75 | 0.73 | 24 |
+| FINANCE | 0.83 | 0.62 | 0.71 | 24 |
+| FITNESS | 0.86 | 0.79 | 0.83 | 24 |
+| HEALTHCARE | 0.67 | 0.70 | 0.68 | 23 |
+| HR | 0.81 | 0.95 | 0.88 | 22 |
+| INFORMATION-TECHNOLOGY | 0.83 | 1.00 | 0.91 | 24 |
+| PUBLIC-RELATIONS | 0.58 | 0.82 | 0.68 | 22 |
+| SALES | 0.52 | 0.65 | 0.58 | 23 |
+| TEACHER | 0.61 | 0.85 | 0.71 | 20 |
